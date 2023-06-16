@@ -1,0 +1,26 @@
+<odoo>
+    <template id="project_website_template" name="Project">
+        <t t-call="website.layout">
+            <div class="container">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>
+                                Name
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="projects" t-as="project">
+                            <tr>
+                                <td>
+                                    <t t-esc="project.name" t-attf-contenteditable="True"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+</odoo>
